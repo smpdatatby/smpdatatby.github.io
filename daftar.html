@@ -36,15 +36,20 @@
     <div class="container d-flex align-items-center">
 
       <h4 class="logo mr-auto"><a href="index.html">SMP DaTa</a></h4>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="#" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"> SMP DaTa</a> -->
-
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Beranda</a></li>
+          <li><a href="/index.html">Beranda</a></li>
+          <li><a href="/profile.html#about">Profile Sekolah</a></li>
+          <li><a href="/profile.html#services">Ekstrakulikuler</a></li>
+          <li><a href="/profile.html#portfolio">Galeri</a></li>
+          <li class="drop-down active"><a href="">Pendaftaran</a>
+            <ul>
+              <li class="active"><a href="daftar.html" target="_black">Daftar Sekarang</a></li>
+              <li><a href="https://youtu.be/Ne0MegTnTnY" target="_black">Cara Daftar</a></li>
+            </ul>
+          </li>
           <li><a href="twibbon.html">Twibbon</a></li>
           <li><a href="#contact">Kontak</a></li>
-
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -52,9 +57,203 @@
 
   <main id="main">
     <section class="breadcrumbs bg-white">
-      <iframe
+      <div class="container">
+
+        <div class="section-title">
+          <span>Formulir Pendaftaran</span>
+          <h2>Formulir Pendaftaran</h2>
+          <p>Silahkan isikan data diri anda melalui form dibawah ini !</p>
+        </div>
+        <div class="alert alert-success alert-dismissible fade show d-none success-alert" role="alert">
+          <strong>Terimakasih!</strong> Data anda sudah terkirim.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <form name="register-form">
+          <div class="form-row">
+            <div class="form-group col-lg-6">
+              <label for="nama_lengkap">Nama Lengkap <small>(Sesuai Ijazah/Akta Kelahiran)</small></label>
+              <input type="text" name="nama_lengkap" class="form-control form-control" id="nama_lengkap"
+                data-rule="minlen:4" data-msg="Minimal berisi 4 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="jenis_kelamin">Jenis Kelamin</label>
+              <select name="jenis_kelamin" class="form-control form-control" id="jenis_kelamin" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')">
+                <option value="">-- Pilih Jenis Kelamin --</option>
+                <option value="Laki-Laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-lg-6">
+              <label for="nisn">NISN <small>(Nomor Induk Siswa Nasional)</small> </label>
+              <input type="number" name="nisn" class="form-control form-control" id="nisn" data-rule="minlen:10"
+                data-msg="Minimal berisi 10 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="nik">NIK <small>(Nomor Induk Kependudukan)</small> </label>
+              <input type="number" name="nik" class="form-control form-control" id="nik" data-rule="minlen:4"
+                data-msg="Minimal berisi 5 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-lg-6">
+              <label for="sekolah_asal">Sekolah Asal</label>
+              <input type="text" name="sekolah_asal" class="form-control form-control" id="sekolah_asal"
+                data-rule="minlen:4" data-msg="Minimal berisi 5 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="tahun_lulus">Tahun Lulus</label>
+              <input type="number" name="tahun_lulus" class="form-control form-control" id="tahun_lulus"
+                data-rule="minlen:16" data-msg="Minimal berisi 16 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-lg-6">
+              <label for="tempat_lahir">Tempat Lahir</label>
+              <input type="text" name="tempat_lahir" class="form-control form-control" id="tempat_lahir"
+                data-rule="minlen:4" data-msg="Minimal berisi 4 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="tanggal_lahir">Tanggal Lahir</label>
+              <input type="date" name="tanggal_lahir" class="form-control form-control" id="tanggal_lahir" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="alamat">Alamat <small><i>(Optional)</i></small> </label>
+            <textarea class="form-control" name="alamat" rows="2"></textarea>
+            <div class="validate"></div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-lg-6">
+              <label for="rt">RT</label>
+              <input type="number" name="rt" class="form-control form-control" id="rt" data-rule="minlen:3"
+                data-msg="Minimal berisi 3 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="rw">RW</label>
+              <input type="number" name="rw" class="form-control form-control" id="rw" data-rule="minlen:3"
+                data-msg="Minimal berisi 3 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-lg-6">
+              <label for="desa">Desa/Kelurahan</label>
+              <input type="text" name="desa" class="form-control form-control" id="desa" data-rule="minlen:4"
+                data-msg="Minimal berisi 4 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="kecamatan">Kecamatan</label>
+              <input type="text" name="kecamatan" class="form-control form-control" id="kecamatan" data-rule="minlen:3"
+                data-msg="Minimal berisi 3 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-lg-6">
+              <label for="kabupaten">Kabupaten</label>
+              <input type="text" name="kabupaten" class="form-control form-control" id="kabupaten" data-rule="minlen:5"
+                data-msg="Minimal berisi 5 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="provinsi">Provinsi</label>
+              <input type="text" name="provinsi" class="form-control form-control" id="provinsi" data-rule="minlen:5"
+                data-msg="Minimal berisi 5 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-lg-6">
+              <label for="ibu_kandung">Nama Ibu Kandung <small>(Sesuai Akta Kelahiran)</small> </label>
+              <input type="text" name="ibu_kandung" class="form-control form-control" id="ibu_kandung"
+                data-rule="minlen:3" data-msg="Minimal berisi 3 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="ayah_kandung">Nama Ayah Kandung <small>(Sesuai Akta Kelahiran/Ijazah)</small></label>
+              <input type="text" name="ayah_kandung" class="form-control form-control" id="ayah_kandung"
+                data-rule="minlen:3" data-msg="Minimal berisi 3 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-lg-6">
+              <label for="anak_ke">Anak Ke <small>(Sesuai Akta Kelahiran / KK)</small> </label>
+              <input type="number" name="anak_ke" class="form-control form-control" id="anak_ke" data-rule="minlen:1"
+                data-msg="Minimal berisi 1 karakter" required
+                oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="wali">Nama Wali <small><i>(Optional)</i></small></label>
+              <input type="text" name="wali" class="form-control form-control" id="wali" />
+              <div class="validate"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="nomor_hp">Nomor Whatsapp <small>(Isikan nomor whatsapp yang bisa dihubungi, contoh :
+                085232077932)</small> </label>
+            <input type="number" name="nomor_hp" class="form-control form-control" id="nomor_hp" data-rule="minlen:11"
+              data-msg="Minimal berisi 11 karakter" required
+              oninvalid="this.setCustomValidity('Isian ini tidak boleh kosong !')" oninput="setCustomValidity('')" />
+            <div class="validate"></div>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-kirim">Kirim Data</button>
+            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Harap tunggu...
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
+      <!-- <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSdT4qqGEj3ZH8FjhXSmoTwpxqrjs-rLBt1p7FSOEaBaMPxwPQ/viewform?embedded=true"
-        width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+        width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe> -->
     </section>
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -161,6 +360,34 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwiN5Tl1Ypdu4fEX26-TLgtky35O3FbFGQHvXNLK9bOC90bCbQAhF5jrnCW6iQJfMTD/exec';
+    const form = document.forms['register-form'];
+    const btnKirim = document.querySelector('.btn-kirim');
+    const btnLoading = document.querySelector('.btn-loading');
+    const myAlert = document.querySelector('.success-alert');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // ketika tombol submit diklik
+      // tampilkan tombol loading, hilangkan tombol kirim
+      btnLoading.classList.toggle('d-none');
+      btnKirim.classList.toggle('d-none');
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then((response) => {
+          // tampilkan tombol kirim, hilangkan tombol loading
+          btnLoading.classList.toggle('d-none');
+          btnKirim.classList.toggle('d-none');
+          // tampilkan alert
+          myAlert.classList.toggle('d-none');
+          // reset formnya
+          form.reset();
+          console.log('Success!', response);
+        })
+        .catch((error) => console.error('Error!', error.message));
+    });
+  </script>
 
 </body>
 
